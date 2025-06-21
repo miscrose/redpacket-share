@@ -39,7 +39,7 @@ export default function Auth({ onAuth }) {
 
   return (
     <div style={{ border: '1px solid #ccc', padding: 20, borderRadius: 8, marginBottom: 20 }}>
-      <h2>Sign in / Sign up</h2>
+      <h2 style={{ color: '#F0B90B' }}>Sign in / Sign up</h2>
       {!showReset ? (
         <>
           <form>

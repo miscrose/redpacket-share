@@ -77,10 +77,10 @@ function App() {
             <div style={{display: 'flex', flexDirection: 'column', gap: 18}}>
               <AddCode onCodeAdded={triggerRefresh} />
               <MyCode user={user} refresh={refresh} />
-              <button onClick={handleRefreshTable} style={{ background: '#393C49', color: '#F0B90B', border: '1px solid #F0B90B', width: 180, alignSelf: 'center', marginBottom: 8 }}>Actualiser la table</button>
+              <button onClick={handleRefreshTable} style={{ background: '#393C49', color: '#F0B90B', border: '1px solid #F0B90B', width: 180, alignSelf: 'center', marginBottom: 8 }}>Refresh table</button>
               <TableCodes ref={tableRef} />
             </div>
-            <button onClick={handleLogout} style={{marginTop: 32, display: 'block', marginLeft: 'auto', marginRight: 'auto', background: '#e53935', color: '#fff', border: 'none', borderRadius: 8, padding: '10px 32px', fontWeight: 'bold', fontSize: '1.1rem', cursor: 'pointer'}}>Se déconnecter</button>
+            <button onClick={handleLogout} style={{marginTop: 32, display: 'block', marginLeft: 'auto', marginRight: 'auto', background: '#e53935', color: '#fff', border: 'none', borderRadius: 8, padding: '10px 32px', fontWeight: 'bold', fontSize: '1.1rem', cursor: 'pointer'}}>Sign out</button>
           </>
         )}
       </main>

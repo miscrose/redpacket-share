@@ -13,14 +13,14 @@ export default function AddCode({ onCodeAdded }) {
     setError('');
     setSuccess('');
     if (!code.trim()) {
-      setError('Le code ne peut pas être vide.');
+      setError('Code cannot be empty.');
       setLoading(false);
       return;
     }
     const { error } = await supabase.from('codes').insert([{ code }]);
     if (error) setError(error.message);
     else {
-      setSuccess('Code ajouté !');
+      setSuccess('Code added!');
       setCode('');
       if (onCodeAdded) onCodeAdded();
     }
@@ -31,12 +31,12 @@ export default function AddCode({ onCodeAdded }) {
     <form onSubmit={handleAdd} style={{ marginBottom: 16 }}>
       <input
         type="text"
-        placeholder="Ajouter un code Red Packet"
+        placeholder="Add a Red Packet code"
         value={code}
         onChange={e => setCode(e.target.value)}
         style={{ marginRight: 8 }}
       />
-      <button type="submit" disabled={loading}>Ajouter</button>
+      <button type="submit" disabled={loading}>Add</button>
       {error && <span style={{ color: 'red', marginLeft: 8 }}>{error}</span>}
       {success && <span style={{ color: 'green', marginLeft: 8 }}>{success}</span>}
     </form>
